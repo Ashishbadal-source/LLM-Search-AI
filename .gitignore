@@ -1,0 +1,16 @@
+# ⚙️ Node dependencies
+frontend/node_modules/
+
+# ⚙️ Python virtual environment
+backend/venv/
+
+# 🔒 Environment variables
+.env
+
+# 💻 VS Code / OS clutter
+.vscode/
+.DS_Store
+*.log
+
+# 🔄 Build files (optional)
+frontend/build/
