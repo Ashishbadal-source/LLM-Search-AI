@@ -1,16 +1,14 @@
-# ⚙️ Node dependencies
-frontend/node_modules/
+# Node.js
+/frontend/node_modules/
+/frontend/build/
 
-# ⚙️ Python virtual environment
-backend/venv/
+# Python venv
+/backend/venv/
+/.venv/
 
-# 🔒 Environment variables
-.env
+# Python cache
+__pycache__/
 
-# 💻 VS Code / OS clutter
-.vscode/
+# System
 .DS_Store
-*.log
-
-# 🔄 Build files (optional)
-frontend/build/
+.env
