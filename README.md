@@ -2,19 +2,17 @@
 
 A full-stack AI-powered smart search web application built with **React**, **Flask**, and **Cohere LLM API**. Users can type natural language questions and get intelligent responses using free LLM capabilities.
 
----
 
- ✨ Features
+ -----> Features
 
- ✅ Ask anything via a clean React UI
- ✅ Uses **Cohere’s free LLM API** (no billing required)
- ✅ Backend built with Python Flask
- ✅ Beautiful frontend using TailwindCSS
- ✅ Fully local and modular (easy to deploy)
+ 1. Ask anything via a clean React UI
+ 2. Uses **Cohere’s free LLM API** (no billing required)
+ 3. Backend built with Python Flask
+ 4. Beautiful frontend using TailwindCSS
+ 5. Fully local and modular (easy to deploy)
 
----
 
- 🧱 Tech Stack
+ ------> Tech Stack
 
 | Layer       | Tech Used             |
 |-------------|------------------------|
@@ -23,18 +21,16 @@ A full-stack AI-powered smart search web application built with **React**, **Fla
 | LLM API     | Cohere API (Free Tier) |
 | Styling     | TailwindCSS            |
 
----
 
-🗺 Architecture Overview
+
+----->  Architecture Overview
 
 [ React (frontend) ]   --->   POST /api/query
 [ Flask API (backend) ]  --->   Cohere Chat API → response 
 
----
 
 
-
-🚀 Setup Instructions
+----->  Setup Instructions
 
 
 📦 Frontend
@@ -71,7 +67,7 @@ co = cohere.Client("YOUR_API_KEY")
 
 
 
-Built with ❤️ using:
+Built this using:
 
 Cohere API
 Flask
