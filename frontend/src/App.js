@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
@@ -15,7 +14,7 @@ function App() {
     setDarkMode(true);
   }
 
-  fetch("http://localhost:5000/api/history")
+  fetch("https://llm-backend-vvou.onrender.com/api/history")
     .then((res) => res.json())
     .then((data) => setHistory(data))
     .catch((err) => console.error("Failed to load history:", err));
@@ -40,7 +39,7 @@ useEffect(() => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/query", {
+      const res = await fetch("https://llm-backend-vvou.onrender.com/api/query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
@@ -50,9 +49,6 @@ useEffect(() => {
       setResponse(data.response);
 
       
-      
-
-      // Save to history
       setHistory((prev) => [
         { question: query, answer: data.response },
         ...prev,
