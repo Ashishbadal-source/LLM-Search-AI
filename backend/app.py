@@ -53,7 +53,7 @@ def get_history():
 
 @app.route('/')
 def home():
-    return " LLM Backend is Live!"
+    return "LLM Backend is Live!"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
