@@ -16,8 +16,13 @@ function App() {
     if (savedMode === "true") setDarkMode(true);
 
     // Fetch chat history from backend
-    fetch(`${API_BASE}/history`)
-      .then((res) => res.json())
+    fetch(`${API_BASE}/api/history`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
       .then((data) => setHistory(data))
       .catch((err) => console.error("Failed to load history:", err));
   }, []);
@@ -40,13 +45,20 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await fetch(`${API_BASE}/query`, {
+      const res = await fetch(`${API_BASE}/api/query`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
       });
 
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
       const data = await res.json();
+      if (data.error) {
+        throw new Error(data.error);
+      }
       setResponse(data.response);
 
       // Update local history
